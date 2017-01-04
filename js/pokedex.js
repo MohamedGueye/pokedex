@@ -3,17 +3,24 @@ $(function() {
   var pokemon = charmander;
 
   // STEP 1: Uncomment the next line and make sure that the pokemon object prints to the console!
-  //   e.g. console.log(pokemon)
+  console.log(pokemon);
 
   // STEP 2: Use jQuery to add information to the empty fields. The first few have been done for you.
   // Note that some of these fields may not exist for your pokemon. 
   
   $(".pokemon-name").append(pokemon.name);
   $(".pokemon-evolves").append(pokemon.evolutions[0].to);
-  $(".pokemon-ev-level").append("?") // Replace the ?
+  $(".pokemon-ev-level").append("Evolves at level:"); // Replace the ?
   // TODO: Add evolution level here
+  $(".pokemon-ev-level").append("16");
+
+  
   // TODO: Add speed here
+  
+  $(".pokemon-spd").append("65");
+  
   // TODO: Add attack here
+  $(".pokemon-att").append("charmander.attack");
   // TODO: Add defense here
   
   // TODO: Add ability names here to the <ul> with class .ability-names
