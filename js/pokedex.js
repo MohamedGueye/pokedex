@@ -7,25 +7,27 @@ $(function() {
 
   // STEP 2: Use jQuery to add information to the empty fields. The first few have been done for you.
   // Note that some of these fields may not exist for your pokemon. 
-  
+
   $(".pokemon-name").append(pokemon.name);
   $(".pokemon-evolves").append(pokemon.evolutions[0].to);
   $(".pokemon-ev-level").append("Evolves at level:"); // Replace the ?
   // TODO: Add evolution level here
   $(".pokemon-ev-level").append("16");
 
-  
+
   // TODO: Add speed here
-  
+
   $(".pokemon-spd").append("65");
-  
+
   // TODO: Add attack here
-  $(".pokemon-att").append("charmander.attack");
+  $(".pokemon-att").append(charmander.attack);
   // TODO: Add defense here
-  
+  $(".pokeman-defense").append(charmander.defense);
   // TODO: Add ability names here to the <ul> with class .ability-names
-  
-  // TODO: Add egg group names here to a <ul> that you created
+  $('.ability-name').append(pokemon.abilities[0].name)
+
+  $('.ability-name').append(pokemon.abilities[1].name)
+    // TODO: Add egg group names here to a <ul> that you created
 
   // TODO: Add move names in alphabetical order here to the existing <ul>
   // TODO: Add ONLY level up move names to the <ul> you created
@@ -39,8 +41,8 @@ $(function() {
   //   2. Use the Pokeapi to let your users access all of the pokemon! Don't worry about the picture.
 
   // (extra credit) TODO: Add a list of all avaiable learn_types with no repeats!
-  
-  
+
+
   // You don't have to touch anything below here, but if you're curious, this code
   // automatically changes the pokedex image to match your current Pokemon.
   var getProperImageURL = function(pokemon) {
@@ -48,13 +50,15 @@ $(function() {
     var urlNum = returnThreeDigits(pokemonNumber);
     return "http://assets22.pokemon.com/assets/cms2/img/pokedex/full/" + urlNum + ".png";
   };
-  
+
   var returnThreeDigits = function(num) {
     if (num < 10) {
       return "00" + num;
-    } else if (num < 100) {
+    }
+    else if (num < 100) {
       return "0" + num;
-    } else {
+    }
+    else {
       return num;
     }
   };
